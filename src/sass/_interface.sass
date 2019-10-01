@@ -2,21 +2,27 @@ body
   font-family: sans-serif
 
 img
-  min-width: 100%
+  max-width: 100%
 .container
   width: 1170px
   margin: auto
-@media ( max-width: 1200px )
+@media ( max-width: 1200px ) 
   .container
     width: 760px
 @media ( max-width: 768px )
   .container
     max-width: 580px
+    width: 90%
+
+@media ( max-width: 567px )
+  .container
+    max-width: 480px
     width: 95%
 
 @media ( max-width: 480px )
   .container
-    width: 960px
+    max-width: 400px
+    
   
 .button
   border-radius: 10px
