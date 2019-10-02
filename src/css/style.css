@@ -13,27 +13,31 @@ img {
 
 @media (max-width: 1200px) {
   .container {
-    width: 760px;
+    width: 900px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 760px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    max-width: 580px;
-    width: 90%;
+    max-width: 530px;
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 576px) {
   .container {
-    max-width: 480px;
-    width: 95%;
+    max-width: 350px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
   .container {
-    max-width: 400px;
+    max-width: 277px;
   }
 }
 
@@ -152,7 +156,7 @@ img {
 }
 
 .hero-list__image {
-  width: 40px;
+  min-width: 40px;
   height: 40px;
   border: 2px solid #ffd200;
   display: -webkit-box;
