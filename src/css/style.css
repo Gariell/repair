@@ -1,5 +1,22 @@
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
 }
 
 img {
@@ -49,7 +66,8 @@ img {
 }
 
 .navbar {
-  padding: 8px 0;
+  padding-bottom: 8px;
+  padding-top: 7px;
 }
 
 .navbar-block {
@@ -82,19 +100,25 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 13px;
 }
 
 .navbar__button {
   margin-left: 30px;
+  font-size: 13px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .navbar__phone {
+  font-size: 20px;
   display: inline-block;
   color: #333333;
   font-size: 20px;
-  font-weight: 400;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 7px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -111,7 +135,7 @@ img {
 }
 
 .hero {
-  padding: 50px 0;
+  padding: 48px 0;
 }
 
 .hero-block {
@@ -121,9 +145,9 @@ img {
 }
 
 .hero-text {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  padding-right: 140px;
+  -ms-flex-preferred-size: 41%;
+      flex-basis: 41%;
+  padding-right: 139px;
 }
 
 .hero-text__title {
@@ -131,6 +155,8 @@ img {
   font-weight: 500;
   line-height: 55px;
   margin-bottom: 40px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .hero-text__subtitle {
@@ -138,6 +164,8 @@ img {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 70px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .hero-list {
