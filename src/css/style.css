@@ -585,4 +585,45 @@ img {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 400px;
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 300px;
+    padding: 30px 20px;
+  }
+  .modal__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .modal__subtitle {
+    margin-bottom: 37px;
+    font-size: 13px;
+  }
+  .modal__input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .modal__input2 {
+    margin-bottom: 30px;
+  }
+  .modal__button {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .modal-feedback__text {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .modal-feedback__phone {
+    font-size: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

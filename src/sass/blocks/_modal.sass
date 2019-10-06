@@ -55,3 +55,37 @@
     color: $text-color   
     text-decoration: none
     +bold
+@media ( max-width: 768px )
+  .modal
+    &-dialog
+      max-width: 400px
+      padding: 30px 40px
+@media ( max-width: 576px )
+  .modal
+    &-dialog
+      max-width: 300px
+      padding: 30px 20px  
+    &__title
+      margin: 0
+      margin-bottom: 30px
+      font-size: 18px
+    &__subtitle
+      margin-bottom: 37px
+      font-size: 13px
+    &__input
+      margin-bottom: 10px
+      width: 100%
+    &__input2 
+      margin-bottom: 30px
+    &__button
+      margin-bottom: 15px
+      width: 100%
+    &-feedback__text
+      margin-bottom: 5px
+      font-size: 14px
+    &-feedback__phone
+      font-size: 20px
+
+      
+
+
