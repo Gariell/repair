@@ -21,7 +21,7 @@
             <span class="navbar__address">Калуга, Москва, МО</span>
             <a href="tel:+7(495)42-251-31 " class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
-          <button class="button navbar__button">Перезвоните мне</button>
+          <button class="button navbar__button" id="button">Перезвоните мне</button>
           <!-- /.navbar__contacts -->
         </div>
         <!-- /.navbar__info -->
@@ -122,6 +122,33 @@
     </section>
     <!-- /.offer -->
 
+    <div class="modal" id="modal">
+      <div class="modal-dialog">
+
+        <button class="modal-dialog__close" id="close">&times;</button>
+
+        <h2 class="section-title modal__title">Узнайте точную стоимость ремонта по телефону!</h2>
+        <span class="section-subtitle modal__subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
+
+          <form action="#" class="form modal__form">
+            <input type="text" class="input modal__input" placeholder="Ваше имя">
+            <input type="tell" class="input modal__input modal__input2" placeholder="Ваш телефон">
+            <button class="button modal__button">Узнать стоимость</button> 
+          </form>
+              
+          <span class="modal-feedback__text">
+              Или Вы можете перезвонить нам сами по&nbspтелефону:                                    
+          </span>
+          <span class="modal-feedback__phone">
+            +7 (8182) 42-51-31
+          </span>
+
+      </div>
+    </div>
+
   </main>
+
+  <script src="js/main.js"></script>
+
 </body>
 </html>
