@@ -25,13 +25,13 @@ img
 @media ( max-width: 576px )
   .container
     max-width: 350px
+  .section
+    padding: 68px
  
 @media ( max-width: 380px )
   .container
-    max-width: 277px
-  
-    
-  
+    max-width: 277px   
+
 .button
   border-radius: 10px
   background-color: $main-color
@@ -45,6 +45,7 @@ img
   &-title
     font-size: 24px 
     +bold
+    text-align: center
   &-subtitle
     display: block
     font-size: 16px
@@ -53,3 +54,7 @@ img
   padding: 23px 26px
   font-size: 15px
   border-radius: 10px
+.arrows
+  &__left, &__right
+    &:hover
+      cursor: pointer

@@ -55,6 +55,9 @@ img {
   .container {
     max-width: 350px;
   }
+  .section {
+    padding: 68px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -83,6 +86,7 @@ img {
   font-size: 24px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 .section-subtitle {
@@ -95,6 +99,10 @@ img {
   padding: 23px 26px;
   font-size: 15px;
   border-radius: 10px;
+}
+
+.arrows__left:hover, .arrows__right:hover {
+  cursor: pointer;
 }
 
 .navbar {
@@ -363,6 +371,7 @@ img {
   line-height: 35px;
   margin-bottom: 18px;
   margin-top: -17px;
+  text-align: left;
 }
 
 .offer__subtitle {
@@ -439,15 +448,10 @@ img {
 }
 
 @media (max-width: 768px) {
-  .offer {
+  .offer-block {
     background: #FFF;
-  }
-  .offer-block {
-    width: 100px;
-    padding-right: 0;
-  }
-  .offer-block {
     width: 100%;
+    padding-right: 0;
   }
   .offer__title {
     font-size: 18px;
@@ -479,6 +483,9 @@ img {
 }
 
 @media (max-width: 576px) {
+  .offer {
+    padding-top: 68px;
+  }
   .feedback {
     display: block;
     margin-left: 7px;
@@ -492,6 +499,33 @@ img {
   .feedback__phone {
     margin-left: -2px;
   }
+}
+
+.portfolio {
+  background: #f5f5f5 url("../img/portfolio/portfolio-pattern.jpg") repeat-y center left;
+  background-size: 50%;
+}
+
+.portfolio__title {
+  font-size: 30px;
+  line-height: 45px;
+  margin: auto;
+  margin-bottom: 90px;
+}
+
+.portfolio__arrows {
+  max-width: 150px;
+  margin: auto;
+  margin-top: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.slider__image {
+  margin: auto;
 }
 
 .modal {
