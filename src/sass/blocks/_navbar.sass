@@ -1,5 +1,5 @@
 .navbar
-  padding-bottom: 8px 
+  padding-bottom: 6px
   padding-top: 7px
   &-block
     display: flex
@@ -13,6 +13,7 @@
     display: flex
     flex-direction: column
     font-size: 13px
+    margin-top: -3px
   &__button
     margin-left: 29px
     font-size: 13px
@@ -25,10 +26,12 @@
     font-size: 20px;
     text-decoration: none
     margin-top: 6px
-    margin-bottom: 4px
+    
     +bold
 @media ( max-width: 768px )
   .navbar
+    padding-top: 7px
+    padding-bottom: 14px
     &__contacts
       display: none
     &__button

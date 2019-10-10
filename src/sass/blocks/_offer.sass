@@ -4,10 +4,10 @@
   background-position: center right 
   background-size: contain
   position: relative
-  padding-top: 79px
+  padding-top: 77px
   &:before
     content: ''
-    width: 50%
+    width: 49.9%
     height: 100%
     top: 0
     left: 0
@@ -27,7 +27,7 @@
     line-height: 1.24
     max-width: 250px
     margin-bottom: 31px
-    margin-left: 
+    margin-left: -2px
   &__input
     margin-bottom: 30px
     width: 240px
@@ -40,21 +40,23 @@
     min-height: 70px
     font-size: 16px
     +bold
-    margin-bottom: 23px 
+    margin-bottom: 24px 
        
 .feedback
   display: flex
   justify-content: space-between
   &-block
     width: 230px
-    margin-left: -1px
+    margin-left: -2px
   &-block2 
     padding-left: 30px
+    // margin-left: -3px
   &__text
+    margin-left: -1px
     font-size: 15px
     line-height: 26px    
   &__phone
-    margin-left: -1px
+    margin-left: -2px
     font-size: 15px
     display: inline-block
     color: $text-color   
@@ -104,14 +106,22 @@
   .offer
     padding-top: 49px
     padding-bottom: 50px
+    &__title
+      margin-left: 0
+    &__subtitle
+      margin-left: 0
   .feedback
     display: block
     margin-left: 7px
-    &_text
-      // font-size: 15px
+    &__text
+      font-size: 15px
+      line-height: 1.6
     &-block
-      margin-bottom: 2px
+      margin-bottom: 6px
+      margin-left: 1px
     &-block2
       padding: 0
+      line-height: 1.6
+      margin-bottom: 0
     &__phone
-      margin-left: -2px
+      margin-left: -4px
