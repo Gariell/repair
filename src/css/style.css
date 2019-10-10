@@ -107,7 +107,7 @@ img {
 }
 
 .navbar {
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   padding-top: 7px;
 }
 
@@ -183,7 +183,7 @@ img {
 
 .hero {
   padding-top: 49px;
-  padding-bottom: 49px;
+  padding-bottom: 50.5px;
   background-color: #f5f5f5;
 }
 
@@ -208,8 +208,9 @@ img {
   font-size: 41px;
   font-weight: 500;
   line-height: 55px;
-  margin-bottom: 38px;
-  margin-left: -4px;
+  padding-top: 3px;
+  margin-bottom: 37px;
+  margin-left: -3px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
@@ -226,6 +227,7 @@ img {
 .hero-list {
   margin: 0;
   padding: 0;
+  margin-left: 1px;
 }
 
 .hero-list__item {
@@ -235,7 +237,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 26.5px;
+  margin-bottom: 26px;
 }
 
 .hero-list__item:last-child {
@@ -355,7 +357,7 @@ img {
   background-position: center right;
   background-size: contain;
   position: relative;
-  padding-top: 77px;
+  padding-top: 76px;
 }
 
 .offer:before {
@@ -378,7 +380,7 @@ img {
   max-width: 360px;
   line-height: 1.48;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   text-align: left;
 }
 
@@ -386,11 +388,11 @@ img {
   line-height: 1.24;
   max-width: 250px;
   margin-bottom: 31px;
-  margin-left: -2px;
+  margin-left: -1px;
 }
 
 .offer__input {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   width: 240px;
 }
 
@@ -623,20 +625,23 @@ img {
 
 .price__title {
   margin: auto;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
   font-size: 30px;
   max-width: 550px;
   line-height: 1.5;
 }
 
 .price__subtitle {
-  margin-bottom: 59px;
+  margin-bottom: 58.1px;
   text-align: center;
   font-size: 20px;
 }
 
 .price__card {
   margin-bottom: 30px;
+  width: 31.8%;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 
 .card {
@@ -644,6 +649,7 @@ img {
   border: 1px solid #e8e8e8;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  margin-bottom: 28px;
 }
 
 .card:hover {
@@ -669,17 +675,18 @@ img {
 .card__text {
   padding: 45px;
   padding-top: 32px;
+  margin-left: 2px;
 }
 
 .card__title {
   margin-top: 0;
-  margin-bottom: 30.5px;
+  margin-bottom: 30px;
   margin-left: 1px;
   font-size: 18px;
 }
 
 .card__link {
-  margin-left: -3px;
+  margin-left: 0px;
 }
 
 .card__image {
@@ -759,6 +766,107 @@ img {
   .card__subtitle {
     font-size: 16px;
     margin-bottom: 33px;
+  }
+}
+
+.step {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  text-align: center;
+  position: relative;
+}
+
+.step:after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 25px;
+  position: absolute;
+  background: url("../img/steps/arrow.png") no-repeat center;
+  top: -10px;
+  right: -16%;
+}
+
+.step:last-child:after {
+  display: none;
+}
+
+.step__image {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #ffd200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.step__text {
+  font-size: 14px;
+  line-height: 1.45;
+  max-width: 160px;
+  margin: auto;
+}
+
+.steps {
+  padding-top: 33px;
+  line-height: 1.5;
+}
+
+.steps__title {
+  font-size: 30px;
+  width: 660px;
+  margin: auto;
+  margin-bottom: 47px;
+}
+
+.steps__subtitle {
+  text-align: center;
+  margin-bottom: 66px;
+  font-size: 20px;
+}
+
+.steps-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  .step {
+    margin-bottom: 30px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .step:after {
+    display: none;
+  }
+  .steps-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .step:after {
+    display: none;
+  }
+  .steps-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
