@@ -1,0 +1,89 @@
+.footer
+  position: relative
+.map
+  position: absolute
+  width: 50.2%
+  left: 0
+  top: 0  
+.contacts
+  flex-basis: 50%
+  padding-top: 68px
+  padding-left: 214px
+  &__title
+    +bold
+    font-size: 22px
+    line-height: 1.52
+    margin-bottom: 89px
+  &-block
+    display: flex
+    justify-content: flex-end
+  &-list
+    padding: 0
+    list-style: none
+    margin-left: -3px
+    &__icon
+      padding-top: 6px
+      width: 20px
+      height: 20px
+      text-align: center
+      line-height: 20px
+      margin-right: 23px
+    &__text
+      font-size: 16px
+      line-height: 1.66
+      width: 150px
+    &__text2
+      text-decoration: none
+      color: #000
+      +bold
+    &__item
+      display: flex
+      align-items: flex-start
+      margin-bottom: 30px
+@media ( max-width:1200px  )
+  .contacts
+    flex-basis: 50%
+    padding-top: 68px
+    padding-left: 100px
+    &__title
+      +bold
+      font-size: 22px
+      line-height: 1.52
+      margin-bottom: 89px
+    &-list
+      padding: 0
+      list-style: none
+      margin-left: -3px
+@media (max-width: 992px)
+  .footer
+    display: flex
+    flex-direction: column-reverse
+
+  .map
+    position: relative
+    width: 100%
+  .contacts
+    flex-basis: 100%  
+    padding: 0
+    padding-top: 67px
+    &__title
+      margin-top: 0
+      font-size: 18px
+      line-height: 1.25
+@media ( max-width: 576px )
+  .contacts  
+    padding-top: 63px
+    padding-left: 2px
+    &__title
+      margin-top: 0
+      margin-bottom: 31px
+      font-size: 18px
+      line-height: 1.25
+    &-list
+      &__item
+        &:nth-child(3)
+          margin-top: -2px
+      &__icon
+        margin-right: 13px
+      &__text2
+        margin-bottom: -2px

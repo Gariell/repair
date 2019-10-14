@@ -25,7 +25,7 @@
             <span class="navbar__address">Калуга, Москва, МО</span>
             <a href="tel:+7(495)42-251-31 " class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
-          <button class="button navbar__button wow fadeIn slow" id="button">Перезвоните мне</button>
+          <button class="button navbar__button" id="button">Перезвоните мне</button>
           <!-- /.navbar__contacts -->
         </div>
         <!-- /.navbar__info -->
@@ -49,21 +49,21 @@
             </span>
 
             <ul class="hero-list ">
-              <li class="hero-list__item wow fadeInLeft " data-wow-delay="0.4s">
+              <li class="hero-list__item ">
                 <div class="hero-list__image">
                   <img src="img/hero/clock.png" alt="clock">
                 </div>
                 <span class="hero-list__text">Точно соблюдаем сроки </span>
               </li>
 
-              <li class="hero-list__item wow fadeInLeft " data-wow-delay="0.5s">
+              <li class="hero-list__item">
                 <div class="hero-list__image">
                   <img src="img/hero/calculator.png" alt="calculator">
                 </div>
                 <span class="hero-list__text">Рассчитаем смету на работы и&nbspматериалы в день обращения</span>
               </li>
 
-              <li class="hero-list__item wow fadeInLeft " data-wow-delay="0.6s">
+              <li class="hero-list__item">
                 <div class="hero-list__image">
                   <img src="img/hero/paint-board.png" alt="paint-board">
                 </div>
@@ -73,7 +73,7 @@
             </ul>
           </div>
           <!-- /.hero-text -->
-          <div class="hero-image wow fadeInRight slow ">
+          <div class="hero-image">
             <img class="hero-image__main" src="img/hero/hero-main-01.jpg" alt="план квартиры ">
           </div>
           <!-- /.hero-image -->
@@ -128,7 +128,7 @@
     </section>
     <!-- /.offer -->
 
-    <section class="section portfolio wow fadeInDown slow">
+    <section class="section portfolio ">
       <div class="container">
         <h2 class="section-title portfolio__title">
           Работая с 2007 года,<br> мы сделали более 500 ремонтов в квартирах и домах
@@ -167,7 +167,7 @@
         <!-- /.section-subtitle price__subtitle -->
 
         <div class="cards">
-          <div class="card price__card wow fadeInUp " data-wow-delay="0.1s">
+          <div class="card price__card ">
             <div class="card__image"><img src="img/price/bathroom.jpg" alt=""></div>
             <!-- /.card__image -->
             <div class="card__text">
@@ -180,7 +180,7 @@
           </div>
 
           <!-- /.card -->
-          <div class="card price__card wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card price__card ">
             <div class="card__image"><img src="img/price/livingroom.jpg" alt=""></div>
             <!-- /.card__image -->
             <div class="card__text">
@@ -314,7 +314,7 @@
       </div>
     </section>
 
-    <section class="section service">
+    <!-- <section class="section service">
       <div class="container">
         <div class="service-blocks">
 
@@ -337,7 +337,7 @@
 
         </div>
       </div>
-    </section>
+    </section> -->
 
 
 
@@ -388,9 +388,9 @@
               <div class="input-group brif-g2">
                 <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
               </div>
-              <div class="input-group brif-g2">
+              <!-- <div class="input-group brif-g2">
                 <input type="email" name="email" class="input brif__input" placeholder="Ваш email">
-              </div>
+              </div> -->
               <button class="button brif__button">Рассчитать стоимость</button>
               <span class="brif__coll">Мы перезвоним Вам в течение 60 секунд</span>
             </form>
@@ -402,7 +402,36 @@
       <!-- /.container -->
     </section>
     <!-- /.section brif -->
+    <footer class="footer">
+      <div class="map" id="map" >
+        <script type="text/javascript" charset="utf-8" async 
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa01ad7dbf67a1150c352b58e5a7b1666e549da2a08e40f4db4c0a232fe4712fb&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false">
+        </script>
+      </div>
+      <div class="container">
 
+        <div class="contacts-block">
+          <div class="contacts">
+            <h3 class="contacts__title">Приезжайте к нам в гости! Проконсультируем Вас по&nbspвсем&nbspвопросам ремонта </h3>
+            <ul class="contacts-list">
+              <li class="contacts-list__item">
+                <span class="contacts-list__icon"><img src="img/footer/map-placeholder.png" alt=""></span>
+                <span class="contacts-list__text">г. Москва<br> <span class="contacts-list__text2" >ул. Ленинга, д. 10, корпус 2, оф. 308</span> </span>
+              </li>
+              <li class="contacts-list__item">
+                <span class="contacts-list__icon"><img src="img/footer/clock-with.png" alt=""></span>
+                <span class="contacts-list__text ">Режим работы: <br> <span class="contacts-list__text2">с 9:00 до 18:00</span> </span>
+              </li>
+              <li class="contacts-list__item">
+                <span class="contacts-list__icon"><img src="img/footer/phone.png" alt=""></span>
+                <span class="contacts-list__text ">Телефон: <br> <a href="tel:+ 7(495)42-251-31" class="contacts-list__text2">+ 7 (495) 42-251-31</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </footer>
 
 
 
