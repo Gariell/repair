@@ -3,12 +3,13 @@
 
 body
   +reg
-
+  
 img
   max-width: 100%
 .container
   width: 1170px
   margin: auto
+
   
 @media ( max-width: 1200px ) 
   .container
@@ -21,6 +22,8 @@ img
 @media ( max-width: 768px )
   .container
     max-width: 530px
+ 
+ 
 
 @media ( max-width: 576px )
   .container
@@ -37,6 +40,9 @@ img
   background-color: $main-color
   border: none
   padding: 18px 30px
+  &:active, &:hover, &:focus 
+    outline: 0
+    outline-offset: 0
   &:hover
     background-color: lighten($main-color, 30%)
     cursor: pointer
@@ -55,7 +61,56 @@ img
   padding: 23px 26px
   font-size: 15px
   border-radius: 10px
+  &:active, &:hover, &:focus 
+    outline: 0
+    outline-offset: 0
+  &-group
+    display: inline-block
+    position: relative
 .arrows
   &__left, &__right
     &:hover
       cursor: pointer
+
+
+
+
+.invalid
+  border: 1px solid #ff2929c2
+div.invalid
+  color: #ff2929c2
+  position: absolute
+  font-size: 14px
+  bottom: 6px
+  left: 15px
+  padding: 0 5px
+  background: #fff
+  &-offer
+    font-size: 12px
+    bottom: 20px
+    left: 5px
+  &-modal
+    font-size: 12px
+    bottom: 8px
+  
+  border-radius: 200px 200px 
+@media screen and ( max-width: 1200px )
+   div.invalid  
+    &-offer
+      bottom: 3px
+@media screen and ( max-width: 768px )
+  div.invalid  
+    bottom: 2px
+    left: 90px
+    &-offer
+      bottom: 0px
+      left: 15px
+    &-modal
+      bottom: 8px
+      left: 15px
+@media screen and ( max-width: 576px ) 
+  div.invalid  
+    bottom: 0px
+    left: 15px
+    &-modal
+      bottom: 3px

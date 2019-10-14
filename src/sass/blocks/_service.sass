@@ -1,0 +1,28 @@
+.service
+  padding-top: 100px
+  &-block
+    &s
+      display: flex
+      justify-content: space-between
+    width: 31.7%
+    max-height: 410px
+    background-color: #f7f7f7
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__text
+    font-size: 16px
+    line-height: 23px
+    padding: 21px 25px
+    margin: 0
+    margin-bottom: 10px
+    &-bold
+      +bold
+  &__image
+@media ( max-width: 768px )
+  .service
+    &-block
+      &s 
+        display: inline-block
+        width: 90%
+      flex-basis: 100%
