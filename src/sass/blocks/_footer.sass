@@ -55,24 +55,30 @@
       list-style: none
       margin-left: -3px
 @media (max-width: 992px)
-  .footer
-    display: flex
-    flex-direction: column-reverse
+  
 
-  .map
-    position: relative
-    width: 100%
   .contacts
-    flex-basis: 100%  
-    padding: 0
-    padding-top: 67px
+    padding-left: 70px
     &__title
       margin-top: 0
       font-size: 18px
       line-height: 1.25
+@media ( max-width: 768px )
+  .contacts
+    flex-basis: 100%
+  .footer
+    display: flex
+    flex-direction: column-reverse
+  .map
+    position: relative
+    width: 100%
 @media ( max-width: 576px )
+  .footer
+
+  .map
+    padding-top: 27px
   .contacts  
-    padding-top: 63px
+    padding-top: 21px
     padding-left: 2px
     &__title
       margin-top: 0
@@ -81,9 +87,10 @@
       line-height: 1.25
     &-list
       &__item
+        margin-bottom: 29px
         &:nth-child(3)
           margin-top: -2px
       &__icon
-        margin-right: 13px
+        margin-right: 14px
       &__text2
-        margin-bottom: -2px
+        // margin-bottom: -2px

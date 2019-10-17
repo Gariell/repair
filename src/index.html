@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="un">
 
 <head>
   <meta charset="UTF-8">
@@ -94,15 +94,21 @@
           <span class="section-subtitle offer__subtitle ">Оставьте заявку на
             разработку бесплатного дизайн-проекта! </span>
           <!-- /.section-subtitle -->
-          <form action="#" class="form offer__form" id="offer">
+          <form action="mail.php" method="POST" class="form offer__form" id="offer-form">
             <div class="input-group offer-tyh">
                 <input type="text" name="username" class="input offer__input offer__input1"  placeholder="Ваше имя">
             </div>
             <div class="input-group offer-tyh">
-              <input type="tell" name="phone" class="input offer__input offer__input2 " placeholder="Ваш телефон">
+              <input type="tel" name="phone" class="input offer__input offer__input2 phone" placeholder="Ваш телефон">
             </div>
-            <button class="button offer__button " >Получить бесплатный
-              дизайн-проект</button>
+            
+            <div class="bt">
+              <button class="button offer__button " >Получить бесплатный
+                дизайн-проект</button>
+              <div class="confirmation">
+                  <span >форма успешно отправлена</span>
+              </div>
+            </div>
           </form>
           
           <div class="feedback" >
@@ -381,7 +387,7 @@
           <div class="form brif__form" >
             <h3 class="form__title">Оставьте заявку на&nbspбесплатный расчет ремонта по телефону</h3>
             <span class="form__subtitle">Для этого заполните форму ниже</span>
-            <form action="#" id="brif-form">
+            <form action="mail.php" method="POST" id="brif-form">
               <div class="input-group brif-g2">
                 <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
               </div>
@@ -404,9 +410,7 @@
     <!-- /.section brif -->
     <footer class="footer">
       <div class="map" id="map" >
-        <script type="text/javascript" charset="utf-8" async 
-        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa01ad7dbf67a1150c352b58e5a7b1666e549da2a08e40f4db4c0a232fe4712fb&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false">
-        </script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa01ad7dbf67a1150c352b58e5a7b1666e549da2a08e40f4db4c0a232fe4712fb&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
       </div>
       <div class="container">
 
@@ -460,7 +464,7 @@
       <h2 class="section-title modal__title">Узнайте точную стоимость ремонта по телефону!</h2>
       <span class="section-subtitle modal__subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
 
-      <form action="#" class="form modal__form" id="modal-dialog">
+      <form action="mail.php" method="POST" class="form modal__form" id="modal-dialog">
         <div class="input-group modal-g3">
             <input type="text" type="text" name="username" class="input modal__input" placeholder="Ваше имя">
         </div>
@@ -487,133 +491,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
-  <script>
-    // инициализация WOW.js
-    new WOW().init();
-
-    
-    $(document).ready(function () {
-      // валидация формы 
-      $('#brif-form').validate({
-        rules: {
-
-          username: {
-            required: true,
-            minlength: 2,
-            maxlength: 15
-          },
-
-          phone:{
-            required: true
-          },
-
-          email:{
-            required: true,
-            email: true
-          }
-
-        },
-        errorElement: "div",
-        errorClass: "invalid",
-        messages: {
-          username: {
-            required: "Имя обязательно",
-            minlength: jQuery.validator.format("Имя должно быть не короче двух букв"),
-            maxlength: jQuery.validator.format("Имя должно быть длиннее 15 букв")
-          },
-          email: {
-            required:"Заполните поле",
-            email: "Введите корректный email"
-          },
-          phone: {
-            required: "Укажите телефон"
-          }
-
-        }
-      });
-      $('#offer').validate({
-        rules: {
-
-          username: {
-            required: true,
-            minlength: 2,
-            maxlength: 15
-          },
-
-          phone:{
-            required: true
-          },
-
-        },
-        errorElement: "div",
-        errorClass: "invalid invalid-offer",
-        messages: {
-          username: {
-            required: "Имя обязательно",
-            minlength: jQuery.validator.format("Имя должно быть не короче двух букв"),
-            maxlength: jQuery.validator.format("Имя должно быть длиннее 15 букв")
-          },
-          phone: {
-            required: "Укажите телефон"
-          }
-
-        }
-      });
-      $('#modal-dialog').validate({
-        rules: {
-
-          username: {
-            required: true,
-            minlength: 2,
-            maxlength: 15
-          },
-
-          phone:{
-            required: true
-          },
-
-        },
-        errorElement: "div",
-        errorClass: "invalid invalid-modal",
-        messages: {
-          username: {
-            required: "Имя обязательно",
-            minlength: jQuery.validator.format("Имя должно быть не короче двух букв"),
-            maxlength: jQuery.validator.format("Имя должно быть длиннее 15 букв")
-          },
-          phone: {
-            required: "Укажите телефон"
-          }
-
-        }
-      });
-      // маска для телефона
-      $('.phone').mask('+7 (999) 999-99-99')
-      // скрипт слайдера 
-      $('.slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: $('.arrows__left'),
-        nextArrow: $('.arrows__right'),
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          },
-
-        ]
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 

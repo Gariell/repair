@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ремонт квартир</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/slick.css">
+</head>
+
+<body>
+  <nav class="navbar ">
+    <div class="container">
+      <div class="navbar-block">
+        <div class="navbar__logo ">
+          <img src="img/logo.png" alt="Логотип">
+        </div>
+        <!-- /.navbar__logo -->
+        <div class="navbar__info">
+          <div class="navbar__contacts">
+            <span class="navbar__address">Калуга, Москва, МО</span>
+            <!-- <a href="tel:+7(495)42-251-31 " class="navbar__phone">+7 (495) 42-251-31</a> -->
+          </div>
+          <!-- <button class="button navbar__button" id="button">Перезвоните мне</button> -->
+          <!-- /.navbar__contacts -->
+        </div>
+        <!-- /.navbar__info -->
+      </div>
+      <!-- /.navbar-block -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <!-- /.navbar -->
+
+ <div class="contaner">
+   <div class="thenks" >
+     <h1 align="center"  style="color:#000000; font-size:30px; max-width:600px; margin:auto; padding-top: 100px " >Спасибо, форма успешно отправлена, мы обязательно свяжемся с вами в ближайшее время</h1>
+   </div>
+ </div>
+ 
+  </main>
+  <!-- <script src="js/main.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script>
+    // инициализация WOW.js
+    new WOW().init();
+
+    
+    $(document).ready(function () {
+      // валидация формы 
+      $('#brif-form').validate({
+        rules: {
+
+          username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+
+          phone:{
+            required: true
+          },
+
+          email:{
+            required: true,
+            email: true
+          }
+
+        },
+        errorElement: "div",
+        errorClass: "invalid",
+        messages: {
+          username: {
+            required: "Имя обязательно",
+            minlength: jQuery.validator.format("Имя должно быть не короче двух букв"),
+            maxlength: jQuery.validator.format("Имя должно быть длиннее 15 букв")
+          },
+          email: {
+            required:"Заполните поле",
+            email: "Введите корректный email"
+          },
+          phone: {
+            required: "Укажите телефон"
+          }
+
+        }
+      });
+      $('#offer').validate({
+        rules: {
+
+          username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+
+          phone:{
+            required: true
+          },
+
+        },
+        errorElement: "div",
+        errorClass: "invalid invalid-offer",
+        messages: {
+          username: {
+            required: "Имя обязательно",
+            minlength: jQuery.validator.format("Имя должно быть не короче двух букв"),
+            maxlength: jQuery.validator.format("Имя должно быть длиннее 15 букв")
+          },
+          phone: {
+            required: "Укажите телефон"
+          }
+
+        }
+      });
+      $('#modal-dialog').validate({
+        rules: {
+
+          username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+
+          phone:{
+            required: true
+          },
+
+        },
+        errorElement: "div",
+        errorClass: "invalid invalid-modal",
+        messages: {
+          username: {
+            required: "Имя обязательно",
+            minlength: jQuery.validator.format("Имя должно быть не короче двух букв"),
+            maxlength: jQuery.validator.format("Имя должно быть длиннее 15 букв")
+          },
+          phone: {
+            required: "Укажите телефон"
+          }
+
+        }
+      });
+      // маска для телефона
+      $('.phone').mask('+7 (999) 999-99-99')
+      // скрипт слайдера 
+      $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.arrows__left'),
+        nextArrow: $('.arrows__right'),
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+
+        ]
+      });
+    });
+  </script>
+
+</body>
+
+</html>
