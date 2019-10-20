@@ -1,7 +1,8 @@
 .price
+  padding-top: 90px
   &__title
     margin: auto
-    margin-bottom: 48px
+    margin-bottom: 50px
     font-size: 30px
     max-width: 550px
     line-height: 1.5
@@ -23,19 +24,22 @@
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
     .card__image:before
       opacity: 1
+    @media screen and (max-width: 990px) 
+      box-shadow: none
     
   &s
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    margin-left: -0px
   &__text
     padding: 45px
     padding-top: 32px
-    margin-left: 2px
+    margin-left: 1px
   &__title
     margin-top: 0 
     margin-bottom: 30px
-    margin-left: 1px
+    margin-left: 3px
     font-size: 18px
   &__link
     margin-left: 0px
@@ -53,6 +57,8 @@
       background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
       opacity: 0
       transition: 0.2s
+      @media screen and (max-width: 990px) 
+        background-image: none
   &__link
     display: inline-block
     +bold
@@ -63,6 +69,9 @@
     &:hover
       &:after
         height: 12px
+      @media screen and (max-width: 990px) 
+        &:after
+          height: 3px
     &:after
       content: ''
       position: absolute
@@ -74,6 +83,9 @@
       height: 3px
       background-color: $main-color
       transition: 0.2s
+@media ( max-width: 768px )
+  .card
+    width: 45%
 
 @media ( max-width: 576px )
   .price

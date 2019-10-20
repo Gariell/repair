@@ -46,6 +46,19 @@ img
   &:hover
     background-color: lighten($main-color, 30%)
     cursor: pointer
+    @media screen and (max-width: 990px) 
+      background-color: $main-color
+
+@media (max-width: 992px)
+  .button
+  border-radius: 10px
+  background-color: $main-color
+  border: none
+  padding: 18px 30px
+
+
+
+
 .section
   padding: 90px 0
   &-title
@@ -73,18 +86,20 @@ img
       cursor: pointer
 .bt
   position: relative
-.confirmation
-  display: none
-  color: #000000
-  background-color: #9ee067
-  -webkit-filter: opacity(0.8)
-  position: absolute
-  bottom: 15px
-  padding-left: 5px
-  padding-right: 5px 
-  padding-bottom: 3px 
-  // border: 1px solid 
-  border-radius: 200px 200px
+// .confirmation
+//   display: none
+//   color: #000000
+//   background-color: #9de067b9
+//   position: absolute
+//   bottom: 15px
+//   padding-left: 5px
+//   padding-right: 5px 
+//   padding-bottom: 3px 
+//   // border: 1px solid 
+//   border-radius: 200px 200px
+.a-phone
+  text-decoration: none
+  color: $text-color
   
   
 
@@ -108,11 +123,11 @@ div.invalid
     bottom: 8px
   
   border-radius: 200px 200px 
-@media screen and ( max-width: 1200px )
+@media ( max-width: 1200px )
    div.invalid  
     &-offer
       bottom: 3px
-@media screen and ( max-width: 768px )
+@media ( max-width: 768px )
   div.invalid  
     bottom: 2px
     left: 90px
@@ -122,7 +137,7 @@ div.invalid
     &-modal
       bottom: 8px
       left: 15px
-@media screen and ( max-width: 576px ) 
+@media ( max-width: 576px ) 
   div.invalid  
     bottom: 0px
     left: 15px

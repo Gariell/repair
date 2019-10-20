@@ -22,19 +22,24 @@
     min-width: 200px
     background-color: #fff
     padding: 80px 100px
+    
+      
     &__close
-       padding: 5 3 5 5
-       position: absolute
+      padding: 5 3 5 5
+      position: absolute
        
-       top: 0
-       right: 0
-       background-color: #fff
-       border: none
-       +bold
-       &:hover
-         border-radius: 25%
-         background-color: $main-color
-         box-shadow:  0 0 5px rgba($main-color, 3), 0 0 7px rgba($main-color, 1)
+      top: 0
+      right: 0
+      background-color: #fff
+      border: none
+      +bold
+      &:active, &:hover, &:focus 
+        outline: 0
+        outline-offset: 0
+      &:hover
+        border-radius: 25%
+        background-color: $main-color
+        box-shadow:  0 0 5px rgba($main-color, 3), 0 0 7px rgba($main-color, 1)
   &__title
     margin: 0
     margin-bottom: 52px
@@ -63,6 +68,26 @@
     &-dialog
       max-width: 400px
       padding: 30px 40px
+@media ( max-height: 670px )
+  .modal
+    &-dialog
+      max-width: 400px
+      padding: 30px 40px
+    &__title
+      margin: 0
+      margin-bottom: 30px
+      font-size: 18px
+    &__subtitle
+      margin-bottom: 37px
+      font-size: 13px
+    &__input
+      margin-bottom: 10px
+      width: 100%
+    &-feedback__text
+      margin-bottom: 5px
+      font-size: 14px
+    &-feedback__phone
+      font-size: 20px
 @media ( max-width: 576px )
   .modal
     &-dialog

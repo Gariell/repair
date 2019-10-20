@@ -14,8 +14,7 @@ close.addEventListener('click', function() {
 
 
 
- // инициализация WOW.js
- new WOW().init();
+
 
     
  $(document).ready(function () {
@@ -116,28 +115,44 @@ close.addEventListener('click', function() {
    // маска для телефона
    $('.phone').mask('+7 (999) 999-99-99')
 
+   var portfolio = $('.portfolio')
+   var portfolioTop = portfolio.offset().top;
+   $(window).bind('scroll', function () {
+    var windowTop = $(this).scrollTop()
+    if (windowTop > portfolioTop) {
+      $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa01ad7dbf67a1150c352b58e5a7b1666e549da2a08e40f4db4c0a232fe4712fb&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=folse"></script>')
+      $(window).unbind('scroll')
+      
+      
+    }
+    myMap.behaviors.disable('scrollZoom');
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      myMap.behaviors.disable('drag');
+}
+   });
 
-   $('#offer-form').on('submit', function name(event){
 
-     event.preventDefault();
-     var $form = $(this);
+  //  $('#offer-form').on('submit', function name(event){
+
+  //    event.preventDefault();
+  //    var $form = $(this);
 
 
-     if(! $form.valid()) return false;
+  //    if(! $form.valid()) return false;
 
-     $.ajax({
-      type: "POST",
-      url: "mail.php",
-      data: $(this).serialize(),
-      success: function (response) {
-        console.log('прибыли данные: ' + response);
-        $('#offer-form')[0].reset(),
-        $('.confirmation').css("display", "block");
-      },
-        error: function (jqXHR, textStatus){
-          console.error(jqXHR + " " + textStatus)
-        }
-     });
+    //  $.ajax({
+    //   type: "POST",
+    //   url: "mail.php",
+    //   data: $(this).serialize(),
+    //   success: function (response) {
+    //     console.log('прибыли данные: ' + response);
+    //     $('#offer-form')[0].reset(),
+    //     // $('.confirmation').css("display", "block");
+    //   },
+    //     error: function (jqXHR, textStatus){
+    //       console.error(jqXHR + " " + textStatus)
+    //     }
+    //  });
    })
    // скрипт слайдера 
    $('.slider').slick({
@@ -162,4 +177,4 @@ close.addEventListener('click', function() {
 
      ]
    });
- });
+ 

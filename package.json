@@ -1,0 +1,28 @@
+{
+  "name": "repair",
+  "version": "1.0.0",
+  "description": "Сайт для компании 'Ремонт Квартир '",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gariell/repair.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gariell/repair/issues"
+  },
+  "homepage": "https://github.com/Gariell/repair#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-tinify": "^1.0.2"
+  },
+  "dependencies": {
+    "gulp-html-minifier2": "^1.1.11"
+  }
+}
